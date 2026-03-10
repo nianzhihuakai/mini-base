@@ -1,0 +1,24 @@
+server:
+  port: 7000
+  servlet:
+    context-path: /miniapp
+
+spring:
+  application:
+    name: miniapp-scaffold
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.nzhk.miniapp
+
+miniapp:
+  jwt:
+    secret: ${MINIAPP_JWT_SECRET}
+  wechat:
+    appid: ${MINIAPP_WECHAT_APPID}
+    secret: ${MINIAPP_WECHAT_SECRET}
